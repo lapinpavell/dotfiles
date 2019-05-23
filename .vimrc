@@ -20,7 +20,7 @@ set number
 " search highlight
 set hlsearch
 
-" dynamic_c kewords
+" kewords
 match Special /root\|shared\|protected\|far/
 let a = matchadd("Type", "INT8U")
 let b = matchadd("Type", "INT8S")
