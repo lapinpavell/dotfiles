@@ -1,26 +1,32 @@
 
-set nocompatible
+set nocompatible " be iMproved
 filetype plugin on
-
-" encodings
 set fileencodings=cp1251,utf-8
 
-" indentation
+" indentations
 set autoindent
 set cindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
 
-" line numbering
-set number
+" disable arrow keys
+no <left> <Nop>
+ino <left> <Nop>
+no <right> <Nop>
+ino <rignt> <Nop>
+no <up> <Nop>
+ino <up> <Nop>
+no <down> <Nop>
+ino <down> <Nop>
 
-" search highlight
+set number " line numbering
 set hlsearch
 
-" keywords
+" keywords @todo: rewrite
 match Special /root\|shared\|protected\|far/
 let a = matchadd("Type", "INT8U")
 let b = matchadd("Type", "INT8S")
