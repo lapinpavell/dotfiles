@@ -1,27 +1,35 @@
 
-set nocompatible
+set nocompatible " be iMproved
 filetype plugin on
-
-" encodings
 set fileencodings=cp1251,utf-8
 
-" indentation
+" indentations
 set autoindent
 set cindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
 
-" line numbering
-set number
+set number " line numbering
+set hlsearch
+
+" disable arrow keys
+no <left> <Nop>
+ino <left> <Nop>
+no <right> <Nop>
+ino <right> <Nop>
+no <up> <Nop>
+ino <up> <Nop>
+no <down> <Nop>
+ino <down> <Nop>
 
 " mappings
 inoremap df <Esc>
 
-" search highlight
-set hlsearch
+set hlsearch " search highlight
 
 " ctrl+c to toggle highlight
 let hlstate=0
