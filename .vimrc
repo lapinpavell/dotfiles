@@ -17,29 +17,15 @@ set smartindent
 " line numbering
 set number
 
+" mappings
+inoremap df <Esc>
+
 " search highlight
 set hlsearch
 
+" ctrl+c to toggle highlight
+let hlstate=0
+nnoremap <c-c> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
+
 " keywords
 match Special /root\|shared\|protected\|far/
-let a = matchadd("Type", "INT8U")
-let b = matchadd("Type", "INT8S")
-let c = matchadd("Type", "INT16U")
-let d = matchadd("Type", "INT16S")
-let e = matchadd("Type", "INT32U")
-let f = matchadd("Type", "INT32S")
-let g = matchadd("Type", "FP32")
-let h = matchadd("Type", "BOOLEAN")
-let i = matchadd("Type", "BYTE")
-let j = matchadd("Type", "UBYTE")
-let k = matchadd("Type", "WORD")
-let l = matchadd("Type", "UWORD")
-let m = matchadd("Preproc", "#use")
-let n = matchadd("Todo", "NOTE")
-let o = matchadd("Boolean", "TRUE")
-let p = matchadd("Boolean", "FALSE")
-let q = matchadd("Boolean", "HIGH")
-let r = matchadd("Boolean", "LOW")
-let s = matchadd("Statement", "costate")
-let t = matchadd("Boolean", "ENABLE")
-let u = matchadd("Boolean", "DISABLE")
